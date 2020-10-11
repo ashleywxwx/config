@@ -1,0 +1,19 @@
+"*":
+  "atom-beautify":
+    js:
+      indent_size: 2
+  autosave:
+    enabled: true
+  core:
+    telemetryConsent: "no"
+    themes: [
+      "ksx-matrix-ui"
+      "ksx-matrix"
+    ]
+  editor: {}
+  "markdown-preview":
+    useGitHubStyle: true
+  "tree-view":
+    hideVcsIgnoredFiles: true
+  welcome:
+    showOnStartup: false
