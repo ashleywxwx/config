@@ -2,7 +2,9 @@
 fortune | parrotsay
 
 # Aliases
-alias l="ls -ltra"
+alias ll='ls -alF'
+alias la='ls -A'
+alias l='ls -CF'
 alias work="cd ~/workspace"
 
 # Bind Backspace
