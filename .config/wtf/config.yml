@@ -1,0 +1,207 @@
+wtf:
+  colors:
+    border:
+      focusable: green
+      focused: lime green
+      normal: grey
+  grid:
+    # Macbook Display - 202 x 47
+    columns: [17, 17, 17, 17, 17, 17, 17, 17, 17, 17, 17, 17]
+    rows: [4, 4, 4, 4, 4, 4, 4, 4, 4, 4]
+    # Vertical Left Display - 150 x 52
+    # columns: [12, 13, 12, 13, 12, 13, 12, 13, 12, 13, 12, 13]
+    # rows: [4, 4, 4, 4, 4, 4, 4, 4, 4, 4]
+  navigation:
+    shortcuts: true
+  mods:
+    digitalclock:
+      color: limegreen
+      enabled: true
+      font: digitalfont
+      hourFormat: 12
+      position:
+        top: 0
+        left: 0
+        height: 2
+        width: 2
+      refreshInterval: 1
+      title: "🕰 "
+      type: "digitalclock"
+    clocks:
+      colors:
+        rows:
+          even: grey
+          odd: green
+      enabled: true
+      locations:
+        St. Louis: "America/Chicago"
+        Server: "Etc/UTC"
+        New York: "America/New_York"
+        Los Angeles: "America/Los_Angeles"
+        Melbourne: "Australia/Melbourne"
+      position:
+        top: 2
+        left: 0
+        height: 2
+        width: 2
+      refreshInterval: 1
+      sort: "chronological"
+      title: "🕐 🕑 🕒 🕓 🕔"
+    weather:
+      apiKey: "7c333f50721ae446be95f188b1c4a7bb"
+      # From http://openweathermap.org/help/city_list.txt
+      cityids:
+        - 4407066
+      colors:
+        current: "lightblue"
+      enabled: true
+      language: "EN"
+      position:
+        top: 4
+        left: 0
+        height: 3
+        width: 2
+      refreshInterval: 900
+      tempUnit: "F"
+      useEmoji: true
+    resourceusage:
+      enabled: true
+      cpuCombined: true
+      position:
+        top: 7
+        left: 0
+        width: 2
+        height: 2
+    uptime:
+      args: [""]
+      cmd: "uptime"
+      enabled: true
+      position:
+        top: 11
+        left: 0
+        height: 1
+        width: 5
+      type: cmdrunner
+    power:
+      enabled: true
+      position:
+        top: 9
+        left: 0
+        height: 2
+        width: 2
+      title: "⚡️"
+    network:
+      title: "Network"
+      args: ["/Users/doc/workspace/scripts/network.sh"]
+      cmd: "sh"
+      enabled: true
+      position:
+        top: 0
+        left: 2
+        height: 7
+        width: 3
+      type: cmdrunner
+    github:
+      enabled: true
+      enableStatus: true
+      position:
+        top: 4
+        left: 7
+        height: 8
+        width: 5
+      repositories:
+        - "takoda-schemata/takoda-ui"
+        - "takoda-schemata/takoda-android"
+      username: "AndrewBell"
+      customQueries:
+        takodaPRs:
+          title: "Takoda PRs"
+          filter: "org:takoda-schemata is:pr state:open"
+        # myOpenPRs:
+        #   title: "My PRs"
+        #   filter: "state:open is:pr author:AndrewBell"
+        # openIssues:
+        #   # Displays issues that are assigned to you
+        #   title: "My Issues"
+        #   filter: "is:issue state:open author:AndrewBell"
+        # otherIssues:
+        #   # Displays issues not assigned to you, order by their updated_at date
+        #   perPage: 10
+        #   title: "Others Issues"
+        #   filter: "is:issue state:open author:AndrewBell sort:updated-desc"
+    docker:
+      type: docker
+      enabled: true
+      labelColor: green
+      title: 🐳
+      position:
+        top: 0
+        left: 5
+        height: 12
+        width: 2
+      refreshInterval: 30
+    kubernetes-alpha:
+      enabled: true
+      kubeconfig: "/Users/doc/.kube/config"
+      context: "arn:aws:eks:us-east-2:568254975157:cluster/alpha"
+      namespaces:
+      - default
+      objects:
+      - nodes
+      - pods
+      position:
+        top: 0
+        left: 7
+        height: 4
+        width: 2
+      refreshInterval: 30
+      title: "Alpha"
+      type: kubernetes
+    # Not pulling gamma for some reason
+    kubernetes-gamma:
+      enabled: false
+      kubeconfig: "/Users/doc/.kube/config"
+      context: "arn:aws:eks:us-east-2:392358866553:cluster/prod"
+      namespaces:
+      - default
+      objects:
+      - nodes
+      - pods
+      position:
+        top: 4
+        left: 7
+        height: 4
+        width: 3
+      refreshInterval: 30
+      title: "Gamma"
+      type: kubernetes
+    feedreader:
+      enabled: true
+      feeds:
+      - http://wtfutil.com/blog/index.xml
+      feedLimit: 10
+      position:
+        top: 0
+        left: 9
+        width: 3
+        height: 1
+      updateInterval: 14400
+    security:
+      enabled: true
+      position:
+        top: 7
+        left: 2
+        height: 4
+        width: 3
+      refreshInterval: 3600
+    subreddit:
+      enabled: true
+      numberOfPosts: 10
+      position:
+        top: 1
+        left: 9
+        height: 3
+        width: 3
+      sortOrder: new
+      subreddit: "stlouis"
+      refreshInterval: 900
