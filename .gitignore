@@ -3,4 +3,4 @@
 .idea
 
 # Not needed here
-homebrew/
+homebrew/Brewfile.lock.json
