@@ -1,0 +1,22 @@
+# Utility
+brew "adr-tools"
+brew "asdf"
+brew "jq"
+brew "wtfutil"
+brew "yamlfmt"
+brew "yq"
+
+# AWS
+brew "awscli"
+
+# Kubernetes
+brew "helm"
+brew "kubectx"
+brew "kubeseal"
+brew "kubeval"
+brew "k9s"
+
+# Fun
+brew "fortune"
+brew "lolcat"
+brew "figlet"

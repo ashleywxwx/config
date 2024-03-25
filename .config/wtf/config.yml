@@ -48,7 +48,7 @@ wtf:
       sort: "chronological"
       title: "🕐 🕑 🕒 🕓 🕔"
     weather:
-      apiKey: "7c333f50721ae446be95f188b1c4a7bb"
+      apiKey: "EXPIRED"
       # From http://openweathermap.org/help/city_list.txt
       cityids:
         - 4407066
@@ -92,7 +92,7 @@ wtf:
       title: "⚡️"
     network:
       title: "Network"
-      args: ["/Users/doc/workspace/scripts/network.sh"]
+      args: ["~/workspace/scripts/network.sh"]
       cmd: "sh"
       enabled: true
       position:
@@ -109,26 +109,7 @@ wtf:
         left: 7
         height: 8
         width: 5
-      repositories:
-        - "takoda-schemata/takoda-ui"
-        - "takoda-schemata/takoda-android"
-      username: "AndrewBell"
-      customQueries:
-        takodaPRs:
-          title: "Takoda PRs"
-          filter: "org:takoda-schemata is:pr state:open"
-        # myOpenPRs:
-        #   title: "My PRs"
-        #   filter: "state:open is:pr author:AndrewBell"
-        # openIssues:
-        #   # Displays issues that are assigned to you
-        #   title: "My Issues"
-        #   filter: "is:issue state:open author:AndrewBell"
-        # otherIssues:
-        #   # Displays issues not assigned to you, order by their updated_at date
-        #   perPage: 10
-        #   title: "Others Issues"
-        #   filter: "is:issue state:open author:AndrewBell sort:updated-desc"
+      username: "ashleywxwx"
     docker:
       type: docker
       enabled: true
@@ -140,41 +121,6 @@ wtf:
         height: 12
         width: 2
       refreshInterval: 30
-    kubernetes-alpha:
-      enabled: true
-      kubeconfig: "/Users/doc/.kube/config"
-      context: "arn:aws:eks:us-east-2:568254975157:cluster/alpha"
-      namespaces:
-      - default
-      objects:
-      - nodes
-      - pods
-      position:
-        top: 0
-        left: 7
-        height: 4
-        width: 2
-      refreshInterval: 30
-      title: "Alpha"
-      type: kubernetes
-    # Not pulling gamma for some reason
-    kubernetes-gamma:
-      enabled: false
-      kubeconfig: "/Users/doc/.kube/config"
-      context: "arn:aws:eks:us-east-2:392358866553:cluster/prod"
-      namespaces:
-      - default
-      objects:
-      - nodes
-      - pods
-      position:
-        top: 4
-        left: 7
-        height: 4
-        width: 3
-      refreshInterval: 30
-      title: "Gamma"
-      type: kubernetes
     feedreader:
       enabled: true
       feeds:
